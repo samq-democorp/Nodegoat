@@ -1,4 +1,5 @@
 const AllocationsDAO = require("../data/allocations-dao").AllocationsDAO;
+const fakeuserId = null;
 const {
     environmentalScripts
 } = require("../../config/config");
