@@ -1,6 +1,6 @@
 {
   "settingsInheritedFrom": "samq-democorp/whitesource-config@main",
   "checkRunSettings": {
-    "showWsInfo" : true
+    "showWsInfo": true
   }
 }
