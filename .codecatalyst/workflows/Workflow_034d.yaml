@@ -1,0 +1,30 @@
+Name: Workflow_034d
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - master
+
+# Required - Define action configurations.
+Actions:
+  MendSCA_2e:
+    # Identifies the action. Do not modify this value.
+    Identifier: mend/mendsca@v1.0.9
+    Outputs:
+      # Manual reports configuration
+      Reports:
+        # Optional
+        MendSCA:
+          Format: SARIFSCA
+          IncludePaths:
+            - report.sarif
+    Inputs:
+      Sources:
+        - WorkflowSource
+    Compute:
+      Type: EC2
+    # Defines the action's properties.
+    Configuration:
+      MendLicenseKey: ${Secrets.MendLicenseKey}
